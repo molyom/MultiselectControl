@@ -61,12 +61,12 @@ export class MultiSelectPCFControl implements ComponentFramework.StandardControl
 	{
 		this._value = newValue;
 		this._notifyOutputChanged();
-		console.log("notifyChange");
+	//	console.log("notifyChange");
 	}
 
 	async notifySearch(newValue: string)
 	{
-		console.log("called notifySearch");
+	//	console.log("called notifySearch");
 		console.log(this.props.entityName,`?$select=${this.props.columns}&$filter=contains(${this.props.filterField}, '${newValue}')&$top=${this.props.topCount}`);
 
 		return this._context.webAPI.retrieveMultipleRecords(this.props.entityName,`?$select=${this.props.columns}&$filter=contains(${this.props.filterField}, '${newValue}')&$top=${this.props.topCount}`)
@@ -81,7 +81,7 @@ export class MultiSelectPCFControl implements ComponentFramework.StandardControl
 			React.createElement(MultiSelectControl, this.props)
 			, this._container
 		);
-		console.log("viewUpdated");
+	//	console.log("viewUpdated");
 	}
 
 	/**
@@ -110,7 +110,7 @@ export class MultiSelectPCFControl implements ComponentFramework.StandardControl
 	 */
 	public getOutputs(): IOutputs
 	{
-		console.log("getoutputs");
+	//	console.log("getoutputs");
 
 		return {
 			sampleProperty : this._value

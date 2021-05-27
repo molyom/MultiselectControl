@@ -28,7 +28,7 @@ export class MultiSelectControl extends React.Component<IProps, IState> {
 	componentWillReceiveProps(p: IProps) 
 	{
 		this.setState({value : (p.value)});
-		console.log("react props");
+	//	console.log("react props");
     }
 
 	onChange = (ob: any) =>
@@ -47,7 +47,7 @@ export class MultiSelectControl extends React.Component<IProps, IState> {
 
 	loadOptions = async (inputValue: string) => {
 		const res = this.props.onSearch(inputValue);
-		console.log("returning" + JSON.stringify(res));
+		//console.log("returning" + JSON.stringify(res));
 		return res;		
 	}	
 	
